@@ -38,6 +38,24 @@ st.markdown("""
 .card { background: #17233a; border: 1px solid #34445e; border-radius: 16px; padding: 1rem 1.1rem; margin-bottom: .7rem; }
 .small-muted { color: #b7c4d8; font-size: .92rem; }
 div.stButton > button { border-radius: 10px; }
+/* FIX INPUT TEXT VISIBILITY */
+.stApp input,
+.stApp textarea,
+.stApp [contenteditable="true"] {
+    color: #ffffff !important;
+    caret-color: #ffffff !important;
+}
+
+.stApp input::placeholder,
+.stApp textarea::placeholder {
+    color: #888888 !important;
+    opacity: 1 !important;
+}
+
+[data-testid="stChatInput"] textarea {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
